@@ -11,4 +11,6 @@ VIM_PLUG=~/.local/share/nvim/site/autoload/plug.vim
 test -e $VIM_PLUG || { echo "missing vim-plug" ; curl -fLo ${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/autoload/plug.vim --create-dirs \
            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim ; } || { echo "failed to curl vim-plug repo." ; exit 1 ; }
 
+which lazygit &> /dev/null || { brew install lazygit || { echo "failed to install lazygit" ; exit 1 ; } }
+
 echo "Neovim setup complete! Run 'nvim +PlugInstall' to initialize the plugins"
