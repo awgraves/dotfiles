@@ -9,9 +9,11 @@
 set hidden "hide rather than close buffers when navigating away
 set autoread "update buffer when a file is changed from the outside
 
+"yank to system clipboard
+set clipboard+=unnamedplus
+
 "numbers
 set number
-set relativenumber
 
 "indents
 set smartindent
